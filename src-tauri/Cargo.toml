@@ -1,0 +1,15 @@
+[package]
+name = "taskpets-desktop"
+version = "0.1.0"
+description = "TaskPets Windows desktop pet application"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "1.5", features = [] }
+
+[dependencies]
+tauri = { version = "1.6", features = ["system-tray"] }
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
